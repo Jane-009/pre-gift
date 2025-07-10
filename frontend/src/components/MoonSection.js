@@ -13,7 +13,8 @@ const FloatingMoon = () => {
   });
 
   return (
-    <Sphere ref={meshRef} args={[1.5, 64, 64]} position={[0, 0, 0]}>
+    <mesh ref={meshRef} position={[0, 0, 0]}>
+      <sphereGeometry args={[1.5, 32, 32]} />
       <meshStandardMaterial
         color="#f8fafc"
         roughness={0.3}
@@ -21,7 +22,7 @@ const FloatingMoon = () => {
         emissive="#f8fafc"
         emissiveIntensity={0.1}
       />
-    </Sphere>
+    </mesh>
   );
 };
 
