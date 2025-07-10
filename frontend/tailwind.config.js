@@ -72,9 +72,10 @@ module.exports = {
         'xs': '2px'
       },
       backgroundImage: {
-        'gradient-magical': 'linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #e5e7eb 50%, #c7b8ea 75%, #3c1f1a 100%)',
+        'gradient-magical': 'linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #d1d5db 50%, #c7b8ea 75%, #3c1f1a 100%)',
         'gradient-bronze': 'linear-gradient(135deg, #cd7f32 0%, #996633 50%, #8b4513 100%)',
-        'shimmer': 'linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent)'
+        'gradient-warm': 'linear-gradient(135deg, #fdf4e3 0%, #f7fafc 50%, #fef9e7 100%)',
+        'shimmer': 'linear-gradient(90deg, transparent, rgba(205,127,50,0.4), transparent)'
       }
     },
   },
