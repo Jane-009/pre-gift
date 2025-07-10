@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(26, 26, 46, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #cd7f32, #996633);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #996633, #8b4513);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Global styles */
+body {
+  font-family: 'Lora', serif;
+  line-height: 1.6;
+  color: #f8fafc;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #e5e7eb 50%, #c7b8ea 75%, #3c1f1a 100%);
+  background-attachment: fixed;
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Cursor effects */
+.cursor-magical {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%23f8fafc' d='M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z'/%3E%3C/svg%3E") 12 12, auto;
+}
+
+/* Glassmorphism effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Shimmer effect */
+.shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+/* Text shadow effects */
+.text-shadow-magical {
+  text-shadow: 0 0 20px rgba(248, 250, 252, 0.5);
+}
+
+.text-shadow-bronze {
+  text-shadow: 0 0 20px rgba(205, 127, 50, 0.5);
+}
+
+/* Button hover effects */
+.btn-magical {
+  @apply glass-effect text-white font-elegant py-3 px-6 rounded-2xl transition-all duration-300 hover:bg-white hover:bg-opacity-20 hover:shadow-lg hover:shadow-magical-bronze hover:scale-105;
+}
+
+/* Custom animations */
+@keyframes particle-float {
+  0%, 100% { transform: translateY(0px) translateX(0px); }
+  33% { transform: translateY(-10px) translateX(5px); }
+  66% { transform: translateY(5px) translateX(-5px); }
+}
+
+.particle-float {
+  animation: particle-float 4s ease-in-out infinite;
+}
+
+/* Star effects */
+.star-twinkle {
+  animation: twinkle 2s ease-in-out infinite alternate;
+}
+
+@keyframes twinkle {
+  0% { opacity: 0.3; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1.2); }
+}
+
+/* Photo upload area */
+.upload-area {
+  @apply glass-effect p-8 rounded-xl border-2 border-dashed border-magical-bronze hover:border-magical-gold transition-all duration-300;
+}
+
+.upload-area.dragover {
+  @apply border-magical-gold bg-magical-gold bg-opacity-10;
+}
+
+/* Section containers */
+.section-container {
+  @apply min-h-screen flex items-center justify-center p-8;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  .text-6xl { font-size: 3rem; }
+  .text-5xl { font-size: 2.5rem; }
+  .text-4xl { font-size: 2rem; }
+}
