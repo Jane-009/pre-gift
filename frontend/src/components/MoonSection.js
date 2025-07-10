@@ -1,47 +1,28 @@
 import React from 'react';
 
-const FloatingMoon = () => {
-  const meshRef = useRef();
-  
-  useFrame((state) => {
-    if (meshRef.current) {
-      meshRef.current.rotation.y += 0.005;
-      meshRef.current.position.y = Math.sin(state.clock.elapsedTime * 0.5) * 0.2;
-    }
-  });
-
-  return (
-    <mesh ref={meshRef} position={[0, 0, 0]}>
-      <sphereGeometry args={[1.5, 32, 32]} />
-      <meshStandardMaterial
-        color="#f8fafc"
-        roughness={0.3}
-        metalness={0.1}
-        emissive="#f8fafc"
-        emissiveIntensity={0.1}
-      />
-    </mesh>
-  );
-};
+import React from 'react';
 
 const MoonSection = () => {
   return (
     <section className="section-container relative">
+      {/* Animated background moon */}
+      <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <div className="w-40 h-40 bg-magical-moon rounded-full animate-glow opacity-60"></div>
+      </div>
+
+      {/* Floating particles */}
       <div className="absolute inset-0 pointer-events-none">
-        <Canvas camera={{ position: [0, 0, 6] }}>
-          <ambientLight intensity={0.4} />
-          <pointLight position={[10, 10, 10]} intensity={0.8} />
-          <spotLight
-            position={[0, 10, 0]}
-            angle={0.15}
-            penumbra={1}
-            intensity={0.5}
-            castShadow
+        {Array.from({ length: 15 }, (_, i) => (
+          <div
+            key={i}
+            className="absolute w-1 h-1 bg-magical-star rounded-full animate-float"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 4}s`
+            }}
           />
-          <FloatingMoon />
-          <Stars radius={100} depth={50} count={2000} factor={2} saturation={0} fade />
-          <OrbitControls enableZoom={false} enablePan={false} />
-        </Canvas>
+        ))}
       </div>
 
       <div className="glass-enhanced p-12 max-w-2xl mx-auto text-center relative z-10">
