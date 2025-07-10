@@ -29,7 +29,7 @@ const MagicalLanding = ({ onLogout }) => {
         linear-gradient(135deg, 
           rgba(26, 26, 46, ${navyOpacity}) 0%, 
           rgba(22, 33, 62, ${navyOpacity * 0.8}) 25%, 
-          rgba(229, 231, 235, ${silverOpacity}) 50%, 
+          rgba(209, 213, 219, ${silverOpacity}) 50%, 
           rgba(199, 184, 234, ${lavenderOpacity}) 75%, 
           rgba(60, 31, 26, ${brownOpacity}) 100%
         )
@@ -66,7 +66,7 @@ const MagicalLanding = ({ onLogout }) => {
             ))}
           </div>
           
-          <h1 className="text-6xl md:text-8xl font-serif text-magical-moon mb-8 text-shadow-magical animate-fade-in">
+          <h1 className="text-6xl md:text-8xl font-serif text-magical-text-light mb-8 text-shadow-magical animate-fade-in">
             Welcome to Your
             <br />
             <span className="text-magical-bronze">Magical Journey</span>
@@ -98,20 +98,41 @@ const MagicalLanding = ({ onLogout }) => {
       {/* Section 5: Letters from the Past */}
       <section className="section-container">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-5xl font-serif text-magical-moon text-center mb-12 text-shadow-magical">
+          <h2 className="text-5xl font-serif text-magical-text-light text-center mb-12 text-shadow-magical">
             Letters from the Past
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {[1, 2, 3, 4].map((letter) => (
-              <div key={letter} className="glass-enhanced p-8 hover-float cursor-pointer">
-                <div className="text-magical-bronze text-sm font-elegant mb-4">
-                  Ancient Memory #{letter}
+            {[
+              {
+                id: 1,
+                title: "First Memory",
+                content: "The day we first met, when time seemed to stand still and the world became a little more magical. Every glance, every word, every moment etched in starlight."
+              },
+              {
+                id: 2,
+                title: "Adventure Chronicles",
+                content: "From spontaneous midnight drives to planned getaways, every adventure has been better with you by my side. Each journey a new chapter in our story."
+              },
+              {
+                id: 3,
+                title: "Secret Moments",
+                content: "The quiet moments between us, the whispered secrets, the shared dreams that only we understand. These are the treasures that make life extraordinary."
+              },
+              {
+                id: 4,
+                title: "Future Dreams",
+                content: "All the places we'll go, all the memories we'll make, all the dreams we'll chase together. The future is bright because you're in it."
+              }
+            ].map((letter) => (
+              <div key={letter.id} className="glass-enhanced p-8 hover-float cursor-pointer group">
+                <div className="text-magical-bronze text-sm font-elegant mb-4 flex items-center">
+                  <span className="w-2 h-2 bg-magical-bronze rounded-full mr-2"></span>
+                  {letter.title}
                 </div>
-                <div className="text-magical-silver font-elegant">
-                  <p className="mb-4">
-                    This is a placeholder for a beautiful memory or message. 
-                    Click to reveal the hidden content within this magical letter.
+                <div className="text-magical-text-dark font-elegant bg-magical-bg-warm bg-opacity-80 p-4 rounded-lg">
+                  <p className="mb-4 leading-relaxed">
+                    {letter.content}
                   </p>
                   <div className="text-magical-bronze text-sm">
                     ~ Written in starlight
@@ -126,19 +147,27 @@ const MagicalLanding = ({ onLogout }) => {
       {/* Section 6: Cat's Corner */}
       <section className="section-container">
         <div className="text-center">
-          <h2 className="text-5xl font-serif text-magical-moon mb-12 text-shadow-magical">
+          <h2 className="text-5xl font-serif text-magical-text-light mb-12 text-shadow-magical">
             Cat's Corner
           </h2>
           
           <div className="glass-enhanced p-12 max-w-lg mx-auto">
-            <div className="w-32 h-32 bg-magical-bronze rounded-full mx-auto mb-6 animate-float opacity-80"></div>
-            <h3 className="text-2xl font-serif text-magical-moon mb-4">
+            <div className="relative mb-6">
+              <div className="w-32 h-32 bg-gradient-bronze rounded-full mx-auto animate-float opacity-90 shadow-2xl"></div>
+              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2">
+                <div className="w-4 h-4 bg-magical-gold rounded-full animate-twinkle"></div>
+              </div>
+            </div>
+            <h3 className="text-2xl font-serif text-magical-text-light mb-4">
               Luna, the Magical Guardian
             </h3>
-            <p className="text-magical-silver font-elegant">
-              A mystical companion who watches over this sacred space, 
-              wearing a collar made of moonbeams and starlight.
-            </p>
+            <div className="bg-magical-bg-warm bg-opacity-80 p-6 rounded-lg">
+              <p className="text-magical-text-dark font-elegant leading-relaxed">
+                A mystical companion who watches over this sacred space, 
+                wearing a collar made of moonbeams and starlight. Luna knows 
+                all our secrets and purrs approval at every memory we've made.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -146,19 +175,24 @@ const MagicalLanding = ({ onLogout }) => {
       {/* Section 7: Final Message Room */}
       <section className="section-container">
         <div className="text-center">
-          <h2 className="text-5xl font-serif text-magical-moon mb-12 text-shadow-magical">
+          <h2 className="text-5xl font-serif text-magical-text-light mb-12 text-shadow-magical">
             Final Message
           </h2>
           
           <div className="glass-enhanced p-12 max-w-2xl mx-auto">
-            <div className="w-40 h-40 bg-magical-moon rounded-full mx-auto mb-8 animate-glow opacity-90"></div>
-            <h3 className="text-3xl font-serif text-magical-moon mb-6">
+            <div className="w-40 h-40 bg-magical-moon rounded-full mx-auto mb-8 animate-glow opacity-90 shadow-2xl"></div>
+            <h3 className="text-3xl font-serif text-magical-text-light mb-6">
               As the stars align...
             </h3>
-            <p className="text-xl text-magical-silver font-elegant leading-relaxed">
-              This magical journey was created with love, care, and countless hours of devotion. 
-              Every pixel, every animation, every moment was crafted to bring joy to your heart.
-            </p>
+            <div className="bg-magical-bg-warm bg-opacity-90 p-8 rounded-2xl">
+              <p className="text-xl text-magical-text-dark font-elegant leading-relaxed mb-4">
+                This magical journey was created with love, care, and countless hours of devotion. 
+                Every pixel, every animation, every moment was crafted to bring joy to your heart.
+              </p>
+              <p className="text-lg text-magical-text-medium font-elegant">
+                Thank you for being the magic in my life. 🌙
+              </p>
+            </div>
             <div className="mt-8 text-magical-bronze font-elegant">
               ~ Forever in the moonlight
             </div>
