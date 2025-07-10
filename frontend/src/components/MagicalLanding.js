@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Stars } from '@react-three/drei';
 import PhotoGallery from './PhotoGallery';
 import MoonSection from './MoonSection';
 import BookshelfSection from './BookshelfSection';
