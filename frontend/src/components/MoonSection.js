@@ -1,7 +1,5 @@
 import React from 'react';
 
-import React from 'react';
-
 const MoonSection = () => {
   return (
     <section className="section-container relative">
