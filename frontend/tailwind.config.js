@@ -9,7 +9,7 @@ module.exports = {
         'magical': {
           'dark': '#1a1a2e',
           'navy': '#16213e',
-          'silver': '#e5e7eb',
+          'silver': '#d1d5db',
           'lavender': '#c7b8ea',
           'gold': '#f59e0b',
           'bronze': '#cd7f32',
@@ -17,8 +17,14 @@ module.exports = {
           'mahogany': '#c04000',
           'golden-brown': '#996633',
           'warm-brown': '#8b4513',
-          'moon': '#f8fafc',
-          'star': '#fbbf24'
+          'moon': '#f1f5f9',
+          'star': '#fbbf24',
+          'text-light': '#f8fafc',
+          'text-dark': '#2d3748',
+          'text-medium': '#4a5568',
+          'bg-soft': '#f7fafc',
+          'bg-cream': '#fef9e7',
+          'bg-warm': '#fdf4e3'
         }
       },
       fontFamily: {
