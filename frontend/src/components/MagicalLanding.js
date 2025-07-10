@@ -51,13 +51,19 @@ const MagicalLanding = ({ onLogout }) => {
       {/* Section 1: Moonlit Welcome */}
       <section className="section-container relative">
         <div className="text-center z-10 relative">
+          {/* Animated stars background */}
           <div className="absolute inset-0 pointer-events-none">
-            <Canvas camera={{ position: [0, 0, 5] }}>
-              <ambientLight intensity={0.5} />
-              <pointLight position={[10, 10, 10]} />
-              <Stars radius={100} depth={50} count={5000} factor={4} saturation={0} fade />
-              <OrbitControls enableZoom={false} enablePan={false} />
-            </Canvas>
+            {Array.from({ length: 20 }, (_, i) => (
+              <div
+                key={i}
+                className="absolute w-2 h-2 bg-magical-star rounded-full animate-twinkle"
+                style={{
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                  animationDelay: `${Math.random() * 2}s`
+                }}
+              />
+            ))}
           </div>
           
           <h1 className="text-6xl md:text-8xl font-serif text-magical-moon mb-8 text-shadow-magical animate-fade-in">
