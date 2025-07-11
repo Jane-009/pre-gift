@@ -55,42 +55,44 @@ const MagicalLanding = ({ onLogout }) => {
       </button>
 
       {/* Section 1: Moonlit Welcome */}
-      <section className="section-container relative">
-        <div className="text-center z-10 relative">
-          {/* Animated stars background */}
-          <div className="absolute inset-0 pointer-events-none">
-            {Array.from({ length: 20 }, (_, i) => (
-              <div
-                key={i}
-                className="absolute w-2 h-2 bg-magical-star rounded-full animate-twinkle"
-                style={{
-                  left: `${Math.random() * 100}%`,
-                  top: `${Math.random() * 100}%`,
-                  animationDelay: `${Math.random() * 2}s`
-                }}
-              />
-            ))}
+      <ScrollReveal>
+        <section className="section-container relative">
+          <div className="text-center z-10 relative">
+            {/* Animated stars background */}
+            <div className="absolute inset-0 pointer-events-none">
+              {Array.from({ length: 20 }, (_, i) => (
+                <div
+                  key={i}
+                  className="absolute w-2 h-2 bg-magical-star rounded-full animate-twinkle"
+                  style={{
+                    left: `${Math.random() * 100}%`,
+                    top: `${Math.random() * 100}%`,
+                    animationDelay: `${Math.random() * 2}s`
+                  }}
+                />
+              ))}
+            </div>
+            
+            <h1 className="text-6xl md:text-8xl font-serif text-magical-text-light mb-8 text-shadow-magical animate-fade-in">
+              Welcome to Your
+              <br />
+              <span className="text-magical-bronze">Magical Journey</span>
+            </h1>
+            
+            <div className="w-32 h-1 bg-gradient-bronze mx-auto mb-8 rounded-full animate-shimmer"></div>
+            
+            <p className="text-xl md:text-2xl text-magical-silver font-elegant max-w-2xl mx-auto leading-relaxed animate-slide-up">
+              A timeless collection of memories, dreams, and moments crafted with love
+            </p>
           </div>
           
-          <h1 className="text-6xl md:text-8xl font-serif text-magical-text-light mb-8 text-shadow-magical animate-fade-in">
-            Welcome to Your
-            <br />
-            <span className="text-magical-bronze">Magical Journey</span>
-          </h1>
-          
-          <div className="w-32 h-1 bg-gradient-bronze mx-auto mb-8 rounded-full animate-shimmer"></div>
-          
-          <p className="text-xl md:text-2xl text-magical-silver font-elegant max-w-2xl mx-auto leading-relaxed animate-slide-up">
-            A timeless collection of memories, dreams, and moments crafted with love
-          </p>
-        </div>
-        
-        <div className="scroll-indicator">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 16l-6-6h12l-6 6z"/>
-          </svg>
-        </div>
-      </section>
+          <div className="scroll-indicator">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 16l-6-6h12l-6 6z"/>
+            </svg>
+          </div>
+        </section>
+      </ScrollReveal>
 
       {/* Section 2: Moon Section */}
       <MoonSection />
