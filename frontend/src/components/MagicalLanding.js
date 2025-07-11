@@ -95,62 +95,72 @@ const MagicalLanding = ({ onLogout }) => {
       </ScrollReveal>
 
       {/* Section 2: Moon Section */}
-      <MoonSection />
+      <ScrollReveal delay={200}>
+        <MoonSection />
+      </ScrollReveal>
 
       {/* Section 3: Photo Gallery */}
-      <PhotoGallery />
+      <ScrollReveal delay={400}>
+        <PhotoGallery />
+      </ScrollReveal>
 
       {/* Section 4: Bookshelf Section */}
-      <BookshelfSection />
+      <ScrollReveal delay={600}>
+        <BookshelfSection />
+      </ScrollReveal>
 
       {/* Section 5: Letters from the Past */}
-      <section className="section-container">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-5xl font-serif text-magical-text-light text-center mb-12 text-shadow-magical">
-            Letters from the Past
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {[
-              {
-                id: 1,
-                title: "First Memory",
-                content: "The day we first met, when time seemed to stand still and the world became a little more magical. Every glance, every word, every moment etched in starlight."
-              },
-              {
-                id: 2,
-                title: "Adventure Chronicles",
-                content: "From spontaneous midnight drives to planned getaways, every adventure has been better with you by my side. Each journey a new chapter in our story."
-              },
-              {
-                id: 3,
-                title: "Secret Moments",
-                content: "The quiet moments between us, the whispered secrets, the shared dreams that only we understand. These are the treasures that make life extraordinary."
-              },
-              {
-                id: 4,
-                title: "Future Dreams",
-                content: "All the places we'll go, all the memories we'll make, all the dreams we'll chase together. The future is bright because you're in it."
-              }
-            ].map((letter) => (
-              <div key={letter.id} className="glass-enhanced p-8 hover-float cursor-pointer group">
-                <div className="text-magical-bronze text-sm font-elegant mb-4 flex items-center">
-                  <span className="w-2 h-2 bg-magical-bronze rounded-full mr-2"></span>
-                  {letter.title}
-                </div>
-                <div className="text-magical-text-dark font-elegant bg-magical-bg-warm bg-opacity-80 p-4 rounded-lg">
-                  <p className="mb-4 leading-relaxed">
-                    {letter.content}
-                  </p>
-                  <div className="text-magical-bronze text-sm">
-                    ~ Written in starlight
+      <ScrollReveal delay={800}>
+        <section className="section-container">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-5xl font-serif text-magical-text-light text-center mb-12 text-shadow-magical">
+              Letters from the Past
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {[
+                {
+                  id: 1,
+                  title: "First Memory",
+                  content: "The day we first met, when time seemed to stand still and the world became a little more magical. Every glance, every word, every moment etched in starlight."
+                },
+                {
+                  id: 2,
+                  title: "Adventure Chronicles",
+                  content: "From spontaneous midnight drives to planned getaways, every adventure has been better with you by my side. Each journey a new chapter in our story."
+                },
+                {
+                  id: 3,
+                  title: "Secret Moments",
+                  content: "The quiet moments between us, the whispered secrets, the shared dreams that only we understand. These are the treasures that make life extraordinary."
+                },
+                {
+                  id: 4,
+                  title: "Future Dreams",
+                  content: "All the places we'll go, all the memories we'll make, all the dreams we'll chase together. The future is bright because you're in it."
+                }
+              ].map((letter, index) => (
+                <ScrollReveal key={letter.id} delay={index * 100}>
+                  <div className="glass-enhanced p-8 hover-float cursor-pointer group">
+                    <div className="text-magical-bronze text-sm font-elegant mb-4 flex items-center">
+                      <span className="w-2 h-2 bg-magical-bronze rounded-full mr-2"></span>
+                      {letter.title}
+                    </div>
+                    <div className="text-magical-text-dark font-elegant bg-magical-bg-warm bg-opacity-80 p-4 rounded-lg">
+                      <p className="mb-4 leading-relaxed">
+                        {letter.content}
+                      </p>
+                      <div className="text-magical-bronze text-sm">
+                        ~ Written in starlight
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            ))}
+                </ScrollReveal>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </ScrollReveal>
 
       {/* Section 6: Cat's Corner */}
       <section className="section-container">
