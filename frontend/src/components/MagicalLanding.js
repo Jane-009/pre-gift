@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import PhotoGallery from './PhotoGallery';
 import MoonSection from './MoonSection';
 import BookshelfSection from './BookshelfSection';
+import MagicalParticles from './MagicalParticles';
+import ScrollProgressBar from './ScrollProgressBar';
+import ScrollReveal from './ScrollReveal';
 
 const MagicalLanding = ({ onLogout }) => {
   const [currentSection, setCurrentSection] = useState(0);
