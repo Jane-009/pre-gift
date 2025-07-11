@@ -43,6 +43,9 @@ const MagicalLanding = ({ onLogout }) => {
 
   return (
     <div className="min-h-screen relative overflow-x-hidden" style={getBackgroundStyle()}>
+      <ScrollProgressBar />
+      <MagicalParticles count={25} color="#fbbf24" />
+      
       {/* Logout button */}
       <button
         onClick={onLogout}
