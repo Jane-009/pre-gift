@@ -163,60 +163,64 @@ const MagicalLanding = ({ onLogout }) => {
       </ScrollReveal>
 
       {/* Section 6: Cat's Corner */}
-      <section className="section-container">
-        <div className="text-center">
-          <h2 className="text-5xl font-serif text-magical-text-light mb-12 text-shadow-magical">
-            Cat's Corner
-          </h2>
-          
-          <div className="glass-enhanced p-12 max-w-lg mx-auto">
-            <div className="relative mb-6">
-              <div className="w-32 h-32 bg-gradient-bronze rounded-full mx-auto animate-float opacity-90 shadow-2xl"></div>
-              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2">
-                <div className="w-4 h-4 bg-magical-gold rounded-full animate-twinkle"></div>
+      <ScrollReveal delay={1000}>
+        <section className="section-container">
+          <div className="text-center">
+            <h2 className="text-5xl font-serif text-magical-text-light mb-12 text-shadow-magical">
+              Cat's Corner
+            </h2>
+            
+            <div className="glass-enhanced p-12 max-w-lg mx-auto">
+              <div className="relative mb-6">
+                <div className="w-32 h-32 bg-gradient-bronze rounded-full mx-auto animate-float opacity-90 shadow-2xl"></div>
+                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2">
+                  <div className="w-4 h-4 bg-magical-gold rounded-full animate-twinkle"></div>
+                </div>
+              </div>
+              <h3 className="text-2xl font-serif text-magical-text-light mb-4">
+                Luna, the Magical Guardian
+              </h3>
+              <div className="bg-magical-bg-warm bg-opacity-80 p-6 rounded-lg">
+                <p className="text-magical-text-dark font-elegant leading-relaxed">
+                  A mystical companion who watches over this sacred space, 
+                  wearing a collar made of moonbeams and starlight. Luna knows 
+                  all our secrets and purrs approval at every memory we've made.
+                </p>
               </div>
             </div>
-            <h3 className="text-2xl font-serif text-magical-text-light mb-4">
-              Luna, the Magical Guardian
-            </h3>
-            <div className="bg-magical-bg-warm bg-opacity-80 p-6 rounded-lg">
-              <p className="text-magical-text-dark font-elegant leading-relaxed">
-                A mystical companion who watches over this sacred space, 
-                wearing a collar made of moonbeams and starlight. Luna knows 
-                all our secrets and purrs approval at every memory we've made.
-              </p>
-            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </ScrollReveal>
 
       {/* Section 7: Final Message Room */}
-      <section className="section-container">
-        <div className="text-center">
-          <h2 className="text-5xl font-serif text-magical-text-light mb-12 text-shadow-magical">
-            Final Message
-          </h2>
-          
-          <div className="glass-enhanced p-12 max-w-2xl mx-auto">
-            <div className="w-40 h-40 bg-magical-moon rounded-full mx-auto mb-8 animate-glow opacity-90 shadow-2xl"></div>
-            <h3 className="text-3xl font-serif text-magical-text-light mb-6">
-              As the stars align...
-            </h3>
-            <div className="bg-magical-bg-warm bg-opacity-90 p-8 rounded-2xl">
-              <p className="text-xl text-magical-text-dark font-elegant leading-relaxed mb-4">
-                This magical journey was created with love, care, and countless hours of devotion. 
-                Every pixel, every animation, every moment was crafted to bring joy to your heart.
-              </p>
-              <p className="text-lg text-magical-text-medium font-elegant">
-                Thank you for being the magic in my life. 🌙
-              </p>
-            </div>
-            <div className="mt-8 text-magical-bronze font-elegant">
-              ~ Forever in the moonlight
+      <ScrollReveal delay={1200}>
+        <section className="section-container">
+          <div className="text-center">
+            <h2 className="text-5xl font-serif text-magical-text-light mb-12 text-shadow-magical">
+              Final Message
+            </h2>
+            
+            <div className="glass-enhanced p-12 max-w-2xl mx-auto">
+              <div className="w-40 h-40 bg-magical-moon rounded-full mx-auto mb-8 animate-glow opacity-90 shadow-2xl"></div>
+              <h3 className="text-3xl font-serif text-magical-text-light mb-6">
+                As the stars align...
+              </h3>
+              <div className="bg-magical-bg-warm bg-opacity-90 p-8 rounded-2xl">
+                <p className="text-xl text-magical-text-dark font-elegant leading-relaxed mb-4">
+                  This magical journey was created with love, care, and countless hours of devotion. 
+                  Every pixel, every animation, every moment was crafted to bring joy to your heart.
+                </p>
+                <p className="text-lg text-magical-text-medium font-elegant">
+                  Thank you for being the magic in my life. 🌙
+                </p>
+              </div>
+              <div className="mt-8 text-magical-bronze font-elegant">
+                ~ Forever in the moonlight
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </ScrollReveal>
     </div>
   );
 };
